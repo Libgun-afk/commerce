@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "./header";
-
+import { Header } from "@/components/header";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,12 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col gap-10`}>
         <Header />
-       
         <div className="w-screen flex justify-center">
           <div className="w-[1216px]">{children}</div>
         </div>
+        <Footer />
       </body>
     </html>
   );
