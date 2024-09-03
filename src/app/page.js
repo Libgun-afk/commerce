@@ -1,6 +1,8 @@
 // "use client";
 // import { useEffect, useState } from "react";
 
+import { Exclusive } from "./components/exclusive";
+
 // export const page = () => {
 //   const [timer, setTimer] = useState({
 //     time: 0,
@@ -55,10 +57,18 @@
 //   </div>
 // };
 
-import React from "react";
 
-const page = () => {
-  return <div>page</div>;
-};
 
-export default page;
+
+export default async function Home() {
+  const result = await fetch("https://dev.to/api/articles");
+  const objResult = await result.json();
+
+  return (
+    <home className="flex flex-col items-center w-[1216px]">
+    
+      <Exclusive posts={objResult} />
+    </home>
+  );
+}
+
