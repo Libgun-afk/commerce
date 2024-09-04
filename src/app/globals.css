@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alga {
+  scrollbar-width: none;
+  scroll-snap-align: none;
+}

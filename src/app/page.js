@@ -59,10 +59,12 @@ import { Today } from "../components/today";
 // };
 
 export default async function Home() {
+  const result = await fetch("https://fakestoreapi.com/products");
+  const objResult = await result.json();
   return (
     <div className="flex flex-col items-center w-[1216px]">
       <Exclusive />
-      <Today />
+      <Today posts={objResult} />
     </div>
   );
 }
