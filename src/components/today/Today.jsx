@@ -66,7 +66,7 @@ export const Today = ({ posts }) => {
         >
           {posts.map(({ id, image, title, price, rating }, index) => {
             return (
-              <div className="h-[350px] w-full ">
+              <div key={index} className="h-[350px] w-full ">
                 <Card
                   key={index}
                   id={id}

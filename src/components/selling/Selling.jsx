@@ -51,7 +51,7 @@ export const Selling = ({ posts }) => {
           >
             {posts.map(({ id, image, title, price, rating }, index) => {
               return (
-                <div className="">
+                <div key={index} className="">
                   <SellingCard
                     key={index}
                     id={id}

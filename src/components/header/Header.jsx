@@ -56,12 +56,12 @@ export const Header = () => {
 
             <img
               className="object-cover w-5 h-[17.83px]"
-              src="image copy.png"
+              src="/image copy.png"
               alt=""
             />
             <img
               className="object-cover w-5 h-[17.83px]"
-              src="image.png"
+              src="/image.png"
               alt=""
             />
           </div>

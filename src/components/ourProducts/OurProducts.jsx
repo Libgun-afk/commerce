@@ -76,7 +76,7 @@ export const OurProducts = ({ posts }) => {
             .slice(0, halfOfProduct)
             .map(({ id, image, title, price, rating }, index) => {
               return (
-                <div className="h-[350px] w-full ">
+                <div key={index} className="h-[350px] w-full ">
                   <Cards
                     key={index}
                     id={id}
@@ -98,7 +98,7 @@ export const OurProducts = ({ posts }) => {
             .slice(halfOfProduct, posts.length)
             .map(({ id, image, title, price, rating }, index) => {
               return (
-                <div className="h-[350px] w-full ">
+                <div key={index} className="h-[350px] w-full ">
                   <Cards
                     key={index}
                     id={id}
