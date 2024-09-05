@@ -10,7 +10,7 @@ export const Related = ({ products1 }) => {
       <div>
         {products1.map(
           ({ id, rating, image, title, description, price }, index) => (
-            <div className="flex gap-10 h-[350px]  ">
+            <div key={index} className="flex gap-10 h-[350px]  ">
               <Card
                 key={index}
                 id={id}

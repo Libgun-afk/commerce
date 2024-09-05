@@ -1,8 +1,11 @@
+/** @format */
+
 // const Single = async ({ params }) => {
 //   const { id } = params;
 //   const result = await fetch(`https://fakestoreapi.com/products/${id}`);
 //   const oneCard = await result.json();
 
+import { Today } from "@/app";
 import { ProducDetails } from "@/components/ProducDetails";
 import { Related } from "@/components/Related";
 
@@ -51,6 +54,7 @@ export default async function SignUpPage({ params }) {
     <div>
       <ProducDetails products={oneCard} />
       {/* <Related products1={oneCard1} /> */}
+      <Today posts={oneCard1} />
     </div>
   );
 }
