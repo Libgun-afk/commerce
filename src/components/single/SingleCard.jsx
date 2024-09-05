@@ -1,14 +1,13 @@
 "use client";
-
 import Link from "next/link";
-export const Card = ({ id, image, price, title, rating }) => {
+export const SingleCard = ({ id, image, price, title, rating }) => {
   return (
     <Link
       href={`/single/${id}`}
-      className="w-[270px] overflow-scroll h-[350px] flex flex-col gap-8"
+      className="w-[270px] overflow-scroll h-[370px] flex flex-col gap-8"
     >
-      <div className="flex flex-col gap-8 rounded-lg  h-[350px] w-[270px] border-[#7c7c7d]">
-        <div>
+      <div>
+        <div className="flex flex-col gap-8 rounded-lg  h-[350px] w-[270px] border-[#7c7c7d]">
           <div className="flex flex-col relative items-center group ">
             <div className="rounded-md h-[250px] w-[270px] flex items-center justify-center bg-[#a09f9f] ">
               <img className="w-44 h-36 object-contain mt-7" src={image} />

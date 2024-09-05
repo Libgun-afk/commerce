@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="cupcake">
       <body className={`${inter.className} flex flex-col gap-10`}>
         <Header />
         <div className="w-screen flex justify-center">

@@ -1,20 +1,29 @@
 "use client";
 
-import { Card } from "./Card";
+import { Cards } from "./Cards.jsx";
 
-export const Today = ({ posts }) => {
+export const OurProducts = ({ posts }) => {
   const clickA = () => {
-    document.getElementById("a-a").scrollBy({
+    document.getElementById("b-c").scrollBy({
+      left: -400,
+      behavior: "smooth",
+    });
+    document.getElementById("b-b").scrollBy({
       left: -400,
       behavior: "smooth",
     });
   };
   const clickB = () => {
-    document.getElementById("a-a").scrollBy({
+    document.getElementById("b-c").scrollBy({
+      left: 400,
+      behavior: "smooth",
+    });
+    document.getElementById("b-b").scrollBy({
       left: 400,
       behavior: "smooth",
     });
   };
+  const halfOfProduct = posts.length / 2;
   return (
     <div className="flex flex-col w-full gap-10 pb-6">
       <div className="flex flex-col w-[100%] h-12 py-16 gap-5">
@@ -54,28 +63,51 @@ export const Today = ({ posts }) => {
             </div>
           </div>
         </div>
-        <div></div>
       </div>
       <div className="flex justify-center flex-col">
         <div
-          id="a-a"
+          id="b-c"
           className="flex  overflow-x-scroll gap-4 pt-5 h-[400px] w-full 
           "
         >
-          {posts.map(({ id, image, title, price, rating }, index) => {
-            return (
-              <div className="h-[350px] w-full ">
-                <Card
-                  key={index}
-                  id={id}
-                  image={image}
-                  title={title}
-                  price={price}
-                  rating={rating}
-                />
-              </div>
-            );
-          })}
+          {posts
+            .slice(0, halfOfProduct)
+            .map(({ id, image, title, price, rating }, index) => {
+              return (
+                <div className="h-[350px] w-full ">
+                  <Cards
+                    key={index}
+                    id={id}
+                    image={image}
+                    title={title}
+                    price={price}
+                    rating={rating}
+                  />
+                </div>
+              );
+            })}
+        </div>
+        <div
+          id="b-b"
+          className="flex  overflow-x-scroll gap-4 pt-5 h-[400px] w-full 
+          "
+        >
+          {posts
+            .slice(halfOfProduct, posts.length)
+            .map(({ id, image, title, price, rating }, index) => {
+              return (
+                <div className="h-[350px] w-full ">
+                  <Cards
+                    key={index}
+                    id={id}
+                    image={image}
+                    title={title}
+                    price={price}
+                    rating={rating}
+                  />
+                </div>
+              );
+            })}
         </div>
       </div>
       <div className="flex justify-center">
