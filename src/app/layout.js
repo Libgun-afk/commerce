@@ -1,3 +1,5 @@
+/** @format */
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
@@ -12,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="cupcake">
+    <html lang="en" data-theme="light">
       <body className={`${inter.className} flex flex-col gap-10`}>
         <Header />
         <div className="w-screen flex justify-center">

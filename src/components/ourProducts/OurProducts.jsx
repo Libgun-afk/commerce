@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import { Cards } from "./Cards.jsx";
@@ -67,7 +69,7 @@ export const OurProducts = ({ posts }) => {
       <div className="flex justify-center flex-col">
         <div
           id="b-c"
-          className="flex  overflow-x-scroll gap-4 pt-5 h-[400px] w-full 
+          className="flex alga overflow-x-scroll gap-4 pt-5 h-[400px] w-full 
           "
         >
           {posts
@@ -89,7 +91,7 @@ export const OurProducts = ({ posts }) => {
         </div>
         <div
           id="b-b"
-          className="flex  overflow-x-scroll gap-4 pt-5 h-[400px] w-full 
+          className="flex alga overflow-x-scroll gap-4 pt-5 h-[400px] w-full 
           "
         >
           {posts
