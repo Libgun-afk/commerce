@@ -73,8 +73,6 @@ export const ProducDetails = ({ products }) => {
         <div className="text-sm font-normal border-b border-gray-400 pb-5">
           {description}
         </div>
-
-        <div>Colours:</div>
         <ProductDetails />
       </div>
     </div>

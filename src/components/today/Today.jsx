@@ -1,5 +1,3 @@
-/** @format */
-
 "use client";
 
 import { Card } from "./Card";
@@ -21,7 +19,7 @@ export const Today = ({ posts }) => {
     <div className="flex flex-col w-full gap-10 pb-6">
       <div className="flex flex-col w-[100%] h-12 py-16 gap-5">
         <div className="flex items-center gap-4">
-          <img className="w-5 h-10" src="today's/image.png" alt="" />
+          <img className="w-5 h-10" src="/today's/image.png" alt="" />
           <div>Today’s</div>
         </div>
 
@@ -40,7 +38,7 @@ export const Today = ({ posts }) => {
             >
               <img
                 className="w-4 h-[14px]  items-center justify-center"
-                src="today's/image copy.png"
+                src="/today's/image copy.png"
                 alt=""
               />
             </div>
@@ -50,7 +48,7 @@ export const Today = ({ posts }) => {
             >
               <img
                 className="w-4 h-[14px]"
-                src="today's/image copy 2.png"
+                src="/today's/image copy 2.png"
                 alt=""
               />
             </div>
@@ -61,12 +59,11 @@ export const Today = ({ posts }) => {
       <div className="flex justify-center flex-col">
         <div
           id="a-a"
-          className="flex  overflow-x-scroll gap-4 pt-5 h-[400px] w-full 
-          "
+          className="flex  overflow-x-scroll gap-10 pt-5 h-[400px] w-full "
         >
           {posts.map(({ id, image, title, price, rating }, index) => {
             return (
-              <div key={index} className="h-[350px] w-full ">
+              <div key={index} className="h-[350px] w-full">
                 <Card
                   key={index}
                   id={id}
